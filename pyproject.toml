@@ -3,11 +3,12 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "wordutils"
+name = "wordutilities"
 description = "A package that provides some small tools for English words."
-version = "0.0.1"
+version = "0.0.2"
 authors = [
-  { name="Stella Zhang", email="syz248@nyu.edu" }
+  { name="Stella Zhang", email="syz248@nyu.edu" },
+  { name="Focspam", email="focspam@gmail.com" }
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
@@ -29,4 +30,4 @@ dev = ["pytest"]
 "Bug Tracker" = "https://github.com/software-students-spring2024/3-python-package-exercise-snailman/issues"
 
 [project.scripts]
-wordutils = "wordutils.__main__:main"
+wordutilities = "wordutilities.__main__:main"
