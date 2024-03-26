@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "wordutilities"
 description = "A package that provides some small tools for English words."
-version = "0.0.2"
+version = "0.0.7"
 authors = [
   { name="Stella Zhang", email="syz248@nyu.edu" },
   { name="Focspam", email="focspam@gmail.com" }
