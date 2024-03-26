@@ -8,8 +8,9 @@ def anagrams(word):
 
     Args:
         word: word to find anagrams for
-        valid: 
-    Returns: list with anagrams
+        
+    Returns: 
+        List containing anagrams
     """
 
     return True
@@ -22,7 +23,7 @@ def is_anagram(word1, word2):
         word1, word2: words to be compared
 
     Returns:   
-        true if words are anagrams, false otherwise.
+        True if words are anagrams, False otherwise.
     """
 
     if len(word1) != len(word2):
@@ -55,7 +56,7 @@ def define(word, lower = None, upper = None):
         lower: lower bound in range of total function definitions, inclusive
         
     Returns:
-        String of function definitions within range, giving only the first if no range provided
+        String of word definitions within range, giving only the first if no range provided
     """
 
     if lower is None:
