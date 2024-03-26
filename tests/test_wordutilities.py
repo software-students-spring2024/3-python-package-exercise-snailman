@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import patch
-from src.wordutilities.wordutilities import anagrams, is_anagram, scramble, define
+from src.wordutilities.wordutilities import *
 from wordutilities import wordutilities
 
 class TestWordUtilities:
