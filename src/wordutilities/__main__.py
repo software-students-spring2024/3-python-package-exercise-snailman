@@ -2,7 +2,7 @@ import wordutilities.wordutilities as wordutils
 
 
 def main():
-    wordutils.fill_blanks()
+    pass
 
 
 if __name__ == "__main__":
