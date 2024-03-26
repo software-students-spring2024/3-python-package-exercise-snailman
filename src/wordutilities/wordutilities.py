@@ -12,8 +12,7 @@ def anagrams(word):
     Returns: 
         List containing anagrams
     """
-
-    return True
+    pass
 
 def is_anagram(word1, word2):
     """
@@ -59,7 +58,8 @@ def define(word, lower = None, upper = None):
         String of word definitions within range, giving only the first if no range provided
     """
 
-    if lower is None:
-        lower = 1
+    # if lower is None:
+    #     lower = 1
+    # commented out for unit testing
     
-    return True
+    pass
