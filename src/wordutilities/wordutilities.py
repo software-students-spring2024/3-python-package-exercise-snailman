@@ -1,66 +1,65 @@
-import random
+import random as random
+from collections import Counter
 
-def fill_blanks():
+def anagrams(word):
+    """
+    TO BE IMPLEMENTED
+    Returns list of anagrams of word.
 
-    file1 = open("sentences.txt", "r")
-    content1 = file1.read()
-    file1.close()
-
-    sentences = content1.split("\n")
-    rand_sent_index = random.randint(0, len(sentences) - 1)
-    rand_sentence = sentences[rand_sent_index]
-
-    words = rand_sentence.split(" ")
-    rand_word_index = random.randint(0, len(words) - 1)
-    correct_word = words[rand_word_index]
-
-    words[rand_word_index] = "______"
-
-    sent_blank = ""
-
-    for i in range(0,len(words)):
-        if(i != 0):
-            sent_blank += " " + words[i]
-        else:
-            sent_blank += words[i]
-
-    file2 = open("most_common_words.txt", "r")
-    content2 = file2.read()
-    file2.close()
-
-    common_words = content2.split("\n")
-
-    print("\nFill in the blank: " + sent_blank +"\n")
-
-    word1 = common_words[random.randint(0, len(common_words) - 1)]
-    word2 = common_words[random.randint(0, len(common_words) - 1)]
-    options = [correct_word, word1, word2]
+    Args:
+        word: word to find anagrams for
         
-    options.sort()
+    Returns: 
+        List containing anagrams
+    """
+    raise NotImplementedError
 
-    i = 0
+def is_anagram(word1, word2):
+    """
+    Checks whether two words are anagrams of eachother. Helper function for anagrams()
 
-    for option in options:
-        print(chr(i + 65)+" " + option)
-        i += 1
+    Args:
+        word1, word2: words to be compared
 
-    user_input = input("Enter your answer or quit to exit: ").upper()
+    Returns:   
+        True if words are anagrams, False otherwise.
+    """
 
-    while True:
+    if len(word1) != len(word2):
+        return False
+    return Counter(word1) == Counter(word2)
 
-        if user_input == "QUIT":
-            print("\nBye!")
-            break
 
-        if user_input not in ["A", "B", "C"]:
-                print("\nPlease select A B or C only. Try again.")
-                user_input = input("Enter your anwser or quit to exit: ").upper()
-                continue
+def scramble(word):
+    """
+    Arranges characters in string in random order
 
-        if options[ord(user_input) - 65] == correct_word:
-            print("\nCorrect!")
-            break
+    Args:
+        word: String to be shuffled
 
-        if options[ord(user_input) - 65] != correct_word:
-            print("\nIncorrect. Try again.")  
-            user_input = input("Enter your anwser or quit to exit: ").upper()
+    Returns:
+        Shuffled string
+    """
+    word = list(word)  
+    random.shuffle(word)
+    return ''.join(word)
+
+def define(word, lower = None, upper = None):
+    """
+    TO BE IMPLEMENTED
+    Finds definition(s) of a word
+
+    Args:
+        word: Word to be defined.
+        upper: upper bound in range of total function definitions, exclusive
+        lower: lower bound in range of total function definitions, inclusive
+        
+    Returns:
+        String of word definitions within range, giving only the first if no range provided
+    """
+
+    # if lower is None:
+    #     lower = 1
+    # commented out for unit testing
+    
+    raise NotImplementedError
