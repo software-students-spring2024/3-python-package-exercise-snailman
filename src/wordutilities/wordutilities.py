@@ -66,6 +66,7 @@ def define(word, lower = None, upper = None):
 
 def select_random_sentence():
     """
+    Selects a random rentence from 20 sentences.
     Returns:
         String with a sentence from one of the 20 sentences. Chosen at random.
     """
@@ -95,10 +96,11 @@ This is the last random sentence I will be writing and I am going to stop mid-se
 
 def select_random_most_common_word():
     """
+    Selects a random word from a collection of 20 most common words.
     Returns:
         String with a word from one of the 20 most common words. Chosen at random.
     """
-    content2 = """the
+    content = """the
 and
 have
 that
@@ -119,22 +121,26 @@ their
 can
 who
 get"""
-    common_words = content2.split("\n")
+    common_words = content.split("\n")
 
     return  str(common_words[random.randint(0, len(common_words) - 1)])
 
 
 def fill_blanks():
 
-     
+    """
+    Choses at sentence at random, takes out a word from the sentence (also at random), and presents user with three options (A,B,C).
+    User must guess correct answer, otherwise they will get a message prompting them to try again.
+    User can quit by entering quit.
+    """
     
-    rand_sentence = select_random_sentence()
+    rand_sentence = select_random_sentence() # get random sentence
 
-    words = rand_sentence.split(" ")
+    words = rand_sentence.split(" ") 
     rand_word_index = random.randint(0, len(words) - 1)
-    correct_word = words[rand_word_index]
+    correct_word = words[rand_word_index] # pick word
 
-    words[rand_word_index] = "______"
+    words[rand_word_index] = "______"  # replace word with blank
 
     sent_blank = ""
 
@@ -144,17 +150,17 @@ def fill_blanks():
         else:
             sent_blank += words[i]
 
-    print("\nFill in the blank: " + sent_blank +"\n")
+    print("\nFill in the blank: " + sent_blank +"\n") 
 
-    word1 = select_random_most_common_word()
+    word1 = select_random_most_common_word() # select two random words 
     word2 = select_random_most_common_word()
 
-    while word1 == word2: 
+    while word1 == word2: # make sure random words are not the same
          word2 = select_random_most_common_word()
 
     options = [correct_word, word1, word2]
         
-    options.sort()
+    options.sort() # sort so there is no particular order to the right answer
 
     i = 0
 
@@ -162,23 +168,23 @@ def fill_blanks():
         print(chr(i + 65)+" " + option)
         i += 1
 
-    user_input = input("Enter your answer or quit to exit: ").upper()
+    user_input = input("Enter your answer or quit to exit: ").upper() # get user input
 
     while True:
 
-        if user_input == "QUIT":
+        if user_input == "QUIT":  # quit
             print("\nBye!")
             break
 
-        if user_input not in ["A", "B", "C"]:
+        if user_input not in ["A", "B", "C"]: # if invalid answer, let user know and prompt them to enter another answer
                 print("\nPlease select A B or C only. Try again.")
                 user_input = input("Enter your anwser or quit to exit: ").upper()
                 continue
 
-        if options[ord(user_input) - 65] == correct_word:
+        if options[ord(user_input) - 65] == correct_word: # if correct, quit
             print("\nCorrect!")
             break
 
-        if options[ord(user_input) - 65] != correct_word:
+        if options[ord(user_input) - 65] != correct_word: # if answer is valid (A,B or C) but incorrect, prompt user to try again
             print("\nIncorrect. Try again.")  
             user_input = input("Enter your anwser or quit to exit: ").upper()
