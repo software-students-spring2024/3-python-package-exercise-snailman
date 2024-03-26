@@ -29,6 +29,7 @@ def is_anagram(word1, word2):
         return False
     return Counter(word1) == Counter(word2)
 
+
 def scramble(word):
     """
     Arranges characters in string in random order
@@ -43,21 +44,3 @@ def scramble(word):
     random.shuffle(word)
     return ''.join(word)
 
-def define(word, lower = None, upper = None):
-    """
-    TO BE IMPLEMENTED
-    Finds definition(s) of a word
-
-    Args:
-        word: Word to be defined.
-        upper: upper bound in range of total function definitions, exclusive
-        lower: lower bound in range of total function definitions, inclusive
-        
-    Returns:
-        String of function definitions within range, giving only the first if no range provided
-    """
-
-    if lower is None:
-        lower = 1
-    
-    return True
