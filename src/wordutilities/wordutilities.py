@@ -1,5 +1,11 @@
 import random as random
 from collections import Counter
+import json
+
+# dictionary of words by dwyl at https://github.com/dwyl/english-words/tree/master
+# load json as dict with all words assigned 1
+with open('words_dictionary.json') as word_file:
+    english_words = json.load(word_file)
 
 def anagrams(word):
     """
