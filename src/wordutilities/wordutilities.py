@@ -64,3 +64,4 @@ def fill_blanks():
         if options[ord(user_input) - 65] != correct_word:
             print("\nIncorrect. Try again.")  
             user_input = input("Enter your anwser or quit to exit: ").upper()
+#fill_blanks()
