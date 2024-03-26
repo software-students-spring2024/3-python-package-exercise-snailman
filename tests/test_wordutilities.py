@@ -1,5 +1,5 @@
 import pytest
-from src.wordutilities.wordutilities import anagrams, is_anagram, scramble, define
+from src.wordutilities.wordutilities import *
 
 class TestWordUtilities:
 
