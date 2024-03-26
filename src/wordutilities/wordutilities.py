@@ -40,7 +40,7 @@ def scramble(word):
     Returns:
         Shuffled string
     """
-    word = list(word)
+    word = list(word)  
     random.shuffle(word)
     return ''.join(word)
 
