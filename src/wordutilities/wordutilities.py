@@ -12,7 +12,7 @@ def anagrams(word):
     Returns: 
         List containing anagrams
     """
-    pass
+    raise NotImplementedError
 
 def is_anagram(word1, word2):
     """
@@ -62,4 +62,4 @@ def define(word, lower = None, upper = None):
     #     lower = 1
     # commented out for unit testing
     
-    pass
+    raise NotImplementedError
