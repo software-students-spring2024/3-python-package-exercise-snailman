@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import patch
-from wordutilities import wordutilities
+from src.wordutilities.wordutilities import *
 
 class TestWordUtilities:
     @pytest.fixture
@@ -29,7 +29,7 @@ class TestWordUtilities:
         assert actual == expected, "Expected True to be equal to True!"
 
     def test_select_random_sentence_returns_non_empty_string(self):
-        sentence = wordutilities.select_random_sentence()
+        sentence = select_random_sentence()
         assert isinstance(sentence, str) and len(sentence) > 0
 
     def test_select_random_sentence_returns_valid_sentence(self):
@@ -56,23 +56,23 @@ class TestWordUtilities:
             "This is the last random sentence I will be writing and I am going to stop mid-sent."
         ]  
         for _ in range(40):  # Arbitrary number of trials to ensure randomness is adequately tested
-            sentence = wordutilities.select_random_sentence()
+            sentence = select_random_sentence()
             assert sentence in sentences
 
     def test_select_random_most_common_word_returns_non_empty_string(self):
-        word = wordutilities.select_random_most_common_word()
+        word = select_random_most_common_word()
         assert isinstance(word, str) and len(word) > 0
 
     def test_select_random_most_common_word_returns_valid_word(self):
         common_words = ["the", "and", "have", "that","for","you","with","say","this","they","but","his","from","not","she","as","what","their","can","who","get"] 
-        word = wordutilities.select_random_most_common_word()
+        word = select_random_most_common_word()
         assert word in common_words
 
     @patch('builtins.input', side_effect=[ 'D','A','quit'])  # Assuming 'D' is an invalid choice leading to retry.
     @patch('builtins.print')
     def test_fill_blanks_incorrect_and_correct_guess(self, mock_print, mock_input):
         # Call the function to trigger the mocked input and print
-        wordutilities.fill_blanks()
+        fill_blanks()
 
         # Assert that only these messages will appear: when user enters incorrect/invalid answer, when user enters correct answer, and when user quits
         # Will also verify that for each of these inputs: invalid, incorrect, correct, and "quit" the code will not break
