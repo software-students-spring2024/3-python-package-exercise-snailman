@@ -23,3 +23,10 @@ Run `pipenv install` in your virtual environment.
 ## Test package:
 
 1. Run `pytest` in the project directory.
+
+# Teammates
+
+* [Corina Luca](https://github.com/CorinaLucaFocsan)
+* [Jakob Hablitz](https://github.com/jsh9965)
+* [Josckar Palomeque-Elias](https://github.com/josckar)
+* [Stella Zhang](https://github.com/qq3173732005)
