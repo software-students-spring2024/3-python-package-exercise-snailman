@@ -46,7 +46,7 @@ def anagrams(word):
     
     # raise NotImplementedError
     
-print(anagrams("silent"))    
+#print(anagrams("silent"))    
 
 def is_anagram(word1, word2):
     """
