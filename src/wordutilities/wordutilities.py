@@ -38,9 +38,9 @@ def anagrams(word):
     pattern = re.compile(r'^[a-z]+$')
     if (pattern.match(word) == None):
         return 'Invalid word'
-    # bad implementation using brute force - to be replaced with hash search
-    perms = permutations(word)
-    valid_anagrams = [anagram for anagram in perms if anagram in english_words]
+    # hashed anagram search (much faster)
+    alphabetical = ''.join(sorted(word))
+    valid_anagrams = words_dict[alphabetical]
     valid_anagrams.sort()
     return valid_anagrams
     
