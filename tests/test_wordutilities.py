@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch
-from src.wordutilities.wordutilities import *
-from wordutilities import wordutilities
+from src.wordutilities import *
+from wordutilities import wordutilities # left here for testing purposes, seems to be unnecessary
 
 class TestWordUtilities:
 
@@ -70,7 +70,7 @@ class TestWordUtilities:
         assert isinstance(word, str) and len(word) > 0
 
     def test_select_random_most_common_word_returns_valid_word(self):
-        common_words = ["the", "and", "have", "that","for","you","with","say","this","they","but","his","from","not","she","as","what","their","can","who","get"] 
+        common_words = ["the","and","have","that","for","you","with","say","this","they","but","is","from","not","she","as","what","their","can","who","get"]
         word = wordutilities.select_random_most_common_word()
         assert word in common_words
 
