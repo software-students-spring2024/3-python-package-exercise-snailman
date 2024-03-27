@@ -19,12 +19,12 @@ class TestWordUtilities:
     
     #@pytest.mark.xfail(raises=NotImplementedError)
     def test_anagrams(self):
-        assert anagrams('listen').sort == ['elints', 'enlist', 'inlets', 'listen', 'silent', 'tinsel']
-        assert anagrams('LiStEn').sort == anagrams('sTINel').sort
-        assert anagrams('elbow').sort == ['below', 'bowel', 'elbow']
+        assert anagrams('listen').sort() == ['elints', 'enlist', 'inlets', 'listen', 'silent', 'tinsel']
+        assert anagrams('LiStEn').sort() == anagrams('sTINel').sort()
+        assert anagrams('elbow').sort() == ['below', 'bowel', 'elbow']
         assert anagrams('hello') == ['hello']
-        assert anagrams('QQQ').sort == ['']
-        assert anagrams('ABC123').sort == 'Invalid word'
+        assert anagrams('QQQ').sort() == ['']
+        assert anagrams('ABC123').sort() == 'Invalid word'
     
     @pytest.mark.xfail(raises=NotImplementedError)
     def test_define(self):
