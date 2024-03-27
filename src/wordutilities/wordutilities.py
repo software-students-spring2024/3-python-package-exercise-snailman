@@ -8,6 +8,20 @@ import re
 with open('words_dictionary.json') as word_file:
     english_words = json.load(word_file)
 
+def permutations(word):
+    if len(word) == 0:
+        return ['']
+    elif len(word) == 1:
+        return [word]
+    else:
+        perms = []
+        for i in range(len(word)):
+            first_char = word[i]
+            remaining_chars = word[:i] + word[i+1:]
+            for perm in permutations(remaining_chars):
+                perms.append(first_char + perm)
+        return perms
+
 def anagrams(word):
     
     """
@@ -21,7 +35,7 @@ def anagrams(word):
         List containing anagrams
     """
     # regex to make sure string is only using letters
-    word = word.toLower()
+    word = word.lower()
     pattern = re.compile(r'^[a-z]+$')
     if (pattern.match(word) == None):
         return 'Invalid word'
@@ -32,20 +46,7 @@ def anagrams(word):
     
     # raise NotImplementedError
     
-
-def permutations(word):
-    if len(word) == 0:
-        return ['']
-    elif len(word) == 1:
-        return [word]
-    else:
-        perms = []
-        for i in range(len(word)):
-            first_char = word[i]
-            remaining_chars = perm[:i] + perm[i+1:]
-            for perm in permutations(remaining_chars):
-                perms.append(first_char + perm)
-        return perms
+print(anagrams("silent"))    
 
 def is_anagram(word1, word2):
     """
