@@ -10,6 +10,7 @@ authors = [
   { name="Stella Zhang", email="syz248@nyu.edu" },
   { name="Focspam", email="focspam@gmail.com" },
   { name="Jakob Hablitz", email="jsh9965@nyu.edu" }
+  { name="Josckar Palomeque-Elias", email="jp5936@nyu.edu" }
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
