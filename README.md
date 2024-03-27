@@ -1,4 +1,4 @@
-![Workflow status badge](https://github.com/software-students-spring2024/3-python-package-exercise-snailman/actions/workflows/build.yml/badge.svg)
+![CI/CD](https://github.com/software-students-spring2024/3-python-package-exercise-snailman/actions/workflows/build.yml/badge.svg)
 
 # Python Package Exercise
 
