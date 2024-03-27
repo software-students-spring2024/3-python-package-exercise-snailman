@@ -1,4 +1,4 @@
-![Workflow status badge](https://github.com/software-students-spring2024/3-python-package-exercise-snailman/actions/workflows/build.yml/badge.svg)
+![CI/CD](https://github.com/software-students-spring2024/3-python-package-exercise-snailman/actions/workflows/build.yml/badge.svg)
 
 # Python Package Exercise
 
@@ -11,6 +11,8 @@ An exercise to create a Python package, build it, test it, distribute it, and us
 ## TODO: Instructions for importation
 
 ### Function documentation:
+
+#### [Usage examples](sample.py)
 
 #### `is_anagram(word1, word2)`
 Parameters: `word1` and `word2` are strings
