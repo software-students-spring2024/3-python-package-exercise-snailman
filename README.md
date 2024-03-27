@@ -12,6 +12,8 @@ An exercise to create a Python package, build it, test it, distribute it, and us
 
 ### Function documentation:
 
+#### [Usage examples](sample.py)
+
 #### `is_anagram(word1, word2)`
 Parameters: `word1` and `word2` are strings
 
