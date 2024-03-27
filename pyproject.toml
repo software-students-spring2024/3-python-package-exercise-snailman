@@ -8,7 +8,8 @@ description = "A package that provides some small tools for English words."
 version = "0.0.7"
 authors = [
   { name="Stella Zhang", email="syz248@nyu.edu" },
-  { name="Focspam", email="focspam@gmail.com" }
+  { name="Focspam", email="focspam@gmail.com" },
+  { name="Jakob Hablitz", email="jsh9965@nyu.edu" }
 ]
 license = { file = "LICENSE" }
 readme = "README.md"

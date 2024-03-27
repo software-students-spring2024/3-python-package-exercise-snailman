@@ -1,12 +1,28 @@
 import random as random
 from collections import Counter
 import json
+import re
 
 # load words_dict.json as dict
 with open('words/words_dict.json') as dict_file:
     words_dict = json.load(dict_file)
 
+def permutations(word):
+    if len(word) == 0:
+        return ['']
+    elif len(word) == 1:
+        return [word]
+    else:
+        perms = []
+        for i in range(len(word)):
+            first_char = word[i]
+            remaining_chars = word[:i] + word[i+1:]
+            for perm in permutations(remaining_chars):
+                perms.append(first_char + perm)
+        return perms
+
 def anagrams(word):
+    
     """
     TO BE IMPLEMENTED
     Returns list of anagrams of word.
@@ -17,7 +33,18 @@ def anagrams(word):
     Returns: 
         List containing anagrams
     """
-    raise NotImplementedError
+    # regex to make sure string is only using letters
+    word = word.lower()
+    pattern = re.compile(r'^[a-z]+$')
+    if (pattern.match(word) == None):
+        return 'Invalid word'
+    # bad implementation using brute force - to be replaced with hash search
+    perms = permutations(word)
+    valid_anagrams = [anagram for anagram in perms if anagram in english_words]
+    valid_anagrams.sort()
+    return valid_anagrams
+    
+    # raise NotImplementedError
 
 def is_anagram(word1, word2):
     """
