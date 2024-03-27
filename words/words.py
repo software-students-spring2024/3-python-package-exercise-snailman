@@ -1,5 +1,6 @@
 import json
 
+#dictionary of words by dwyl at https://github.com/dwyl/english-words/tree/master
 # open file and load words into a list
 with open('words\words_alpha.txt', 'r') as words_file:
         words_list = words_file.readlines()
