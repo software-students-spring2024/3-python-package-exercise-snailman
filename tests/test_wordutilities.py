@@ -23,7 +23,7 @@ class TestWordUtilities:
         assert anagrams('LiStEn') == anagrams('sTINel')
         assert anagrams('elbow') == ['below', 'bowel', 'bowle', 'elbow']
         assert anagrams('hello') == ['hello']
-        assert anagrams('QQQ') == ['']
+        assert anagrams('QQQ') == []
         assert anagrams('ABC123') == 'Invalid word'
     
     @pytest.mark.xfail(raises=NotImplementedError)

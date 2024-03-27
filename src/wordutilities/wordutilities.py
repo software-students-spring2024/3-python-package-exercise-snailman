@@ -40,11 +40,16 @@ def anagrams(word):
         return 'Invalid word'
     # hashed anagram search (much faster)
     alphabetical = ''.join(sorted(word))
-    valid_anagrams = words_dict[alphabetical]
+    if alphabetical not in words_dict:
+        return []
+    else:
+        valid_anagrams = words_dict[alphabetical]
     valid_anagrams.sort()
     return valid_anagrams
     
     # raise NotImplementedError
+
+print(anagrams('qqq'))
 
 def is_anagram(word1, word2):
     """
