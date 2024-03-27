@@ -42,11 +42,10 @@ def anagrams(word):
     # bad implementation using brute force - to be replaced with hash search
     perms = permutations(word)
     valid_anagrams = [anagram for anagram in perms if anagram in english_words]
+    valid_anagrams.sort()
     return valid_anagrams
     
     # raise NotImplementedError
-    
-#print(anagrams("silent"))    
 
 def is_anagram(word1, word2):
     """
