@@ -21,7 +21,7 @@ class TestWordUtilities:
     def test_anagrams(self):
         assert anagrams('listen') == ['enlist', 'inlets', 'listen', 'silent', 'slinte', 'tinsel']
         assert anagrams('LiStEn') == anagrams('sTINel')
-        assert anagrams('elbow') == ['below', 'bowel', 'elbow']
+        assert anagrams('elbow') == ['below', 'bowel', 'bowle', 'elbow']
         assert anagrams('hello') == ['hello']
         assert anagrams('QQQ') == ['']
         assert anagrams('ABC123') == 'Invalid word'
