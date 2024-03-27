@@ -22,8 +22,8 @@ def permutations(word):
                     perms.append(first_char + perm)
         return perms
     
-print(permutations('abc'))
-print(permutations('aba'))
+#print(permutations('abc'))
+#print(permutations('aba'))
 
 def anagrams(word):
     
