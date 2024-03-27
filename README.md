@@ -17,7 +17,7 @@ Run `pipenv install` in your virtual environment.
 
 ## Build package:
 
-1. Run `build python -m` in the directory where `pyproject.toml` is located.
+1. Run `python -m build` in the directory where `pyproject.toml` is located.
 2. Verify that the built .tar archive has the correct contents using tar --list -f dist/wordutilities-[package-version].tar.gz
 
 ## Test package:
