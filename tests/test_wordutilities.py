@@ -1,38 +1,37 @@
 import pytest
 from unittest.mock import patch
-from src.wordutilities.wordutilities import *
-from wordutilities import wordutilities
+import wordutilities
 
 class TestWordUtilities:
 
     # @pytest.mark.xfail(raises=NotImplementedError)
     def test_is_anagram(self):
-        assert is_anagram('listen', 'silent') == True
-        assert is_anagram('elbow', 'below') == True
-        assert is_anagram('hello', 'world') == False
+        assert wordutilities.is_anagram('listen', 'silent') == True
+        assert wordutilities.is_anagram('elbow', 'below') == True
+        assert wordutilities.is_anagram('hello', 'world') == False
 
     # @pytest.mark.xfail(raises=NotImplementedError)
     def test_scramble(self):
         word = 'hello'
-        scrambled_word = scramble(word)
+        scrambled_word = wordutilities.scramble(word)
         assert sorted(word) == sorted(scrambled_word)
     
     #@pytest.mark.xfail(raises=NotImplementedError)
     def test_anagrams(self):
-        assert anagrams('listen') == ['enlist', 'inlets', 'listen', 'silent', 'slinte', 'tinsel']
-        assert anagrams('LiStEn') == anagrams('sTINel')
-        assert anagrams('elbow') == ['below', 'bowel', 'bowle', 'elbow']
-        assert anagrams('hello') == ['hello']
-        assert anagrams('QQQ') == []
-        assert anagrams('ABC123') == 'Invalid word'
+        assert wordutilities.anagrams('listen') == ['enlist', 'inlets', 'listen', 'silent', 'slinte', 'tinsel']
+        assert wordutilities.anagrams('LiStEn') == wordutilities.anagrams('sTINel')
+        assert wordutilities.anagrams('elbow') == ['below', 'bowel', 'bowle', 'elbow']
+        assert wordutilities.anagrams('hello') == ['hello']
+        assert wordutilities.anagrams('QQQ') == []
+        assert wordutilities.anagrams('ABC123') == 'Invalid word'
 
     def test_anagrams_blank(self):
-        assert anagrams_blank('pancak') == ['manpack', 'packman', 'pancake']
-        assert anagrams_blank('QQQ') == []
+        assert wordutilities.anagrams_blank('pancak') == ['manpack', 'packman', 'pancake']
+        assert wordutilities.anagrams_blank('QQQ') == []
 
     def test_permutations(self):
-        assert permutations('abc') == ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
-        assert permutations('aba') == ['aba', 'aab', 'baa']
+        assert wordutilities.permutations('abc') == ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
+        assert wordutilities.permutations('aba') == ['aba', 'aab', 'baa']
 
     def test_select_random_sentence_returns_non_empty_string(self):
         sentence = wordutilities.select_random_sentence()
