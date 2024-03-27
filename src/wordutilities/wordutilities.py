@@ -2,9 +2,14 @@ import random as random
 from collections import Counter
 import json
 import re
+import os
+
+# get path to and from current directory
+current_dir = os.path.dirname(__file__)
+rel_path = 'words/words_dict.json'
 
 # load words_dict.json as dict
-with open('words/words_dict.json') as dict_file:
+with open(os.path.join(current_dir, rel_path)) as dict_file:
     words_dict = json.load(dict_file)
 
 def permutations(word):
