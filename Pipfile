@@ -12,7 +12,7 @@ name = "testpypi"
 build = "*"
 twine = "*"
 pytest = "*"
-wordutilities = {version = "==0.0.7", index = "testpypi"}
+wordutilities = {version = "==0.0.8", index = "testpypi"}
 
 [dev-packages]
 
