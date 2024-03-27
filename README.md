@@ -78,6 +78,7 @@ Selects a random sentence and replaces a word with a blank. User must guess out 
 2. Clone the repository.
 3. Run `pipenv shell` in your cloned repository.
 
+
 ### Install dependencies:
 
 Run `pipenv install` in your virtual environment.
@@ -85,11 +86,11 @@ Run `pipenv install` in your virtual environment.
 ### Build package:
 
 1. Run `python -m build` in the directory where `pyproject.toml` is located.
-2. Verify that the built .tar archive has the correct contents using 'tar --list -f dist/wordutilities-0.0.8.tar.gz'
+2. Verify that the built .tar archive has the correct contents using `tar --list -f dist/wordutilities-[version number].tar.gz`
 
 ## Install package:
 
-1. Create a pipenv-managed virtual environment and install the latest version of the package:`pipenv install -i https://test.pypi.org/simple/ wordutilities==0.0.8`
+1. Create a pipenv-managed virtual environment and install the latest version of the package:`pipenv install -i https://test.pypi.org/simple/ wordutilities==[version number]`
 2. Activate the virtual environment: `pipenv shell`.
 3. Create a Python program file that imports the package and uses it, e.g. `from wordutilities import wordutilities`.
 4. Here are some examples as to how to call each function in the package:
