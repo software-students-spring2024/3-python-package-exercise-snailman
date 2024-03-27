@@ -4,7 +4,7 @@ import json
 import re
 
 # load words_dict.json as dict
-with open('words/words_dict.json') as dict_file:
+with open('wordutilities/words/words_dict.json') as dict_file:
     words_dict = json.load(dict_file)
 
 def permutations(word):
