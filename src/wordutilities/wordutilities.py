@@ -6,7 +6,7 @@ import os
 
 # get path to and from current directory
 current_dir = os.path.dirname(__file__)
-rel_path = 'words\words_dict.json'
+rel_path = 'words/words_dict.json'
 
 # load words_dict.json as dict
 with open(os.path.join(current_dir, rel_path)) as dict_file:
