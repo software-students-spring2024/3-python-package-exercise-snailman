@@ -26,6 +26,14 @@ class TestWordUtilities:
         assert anagrams('QQQ') == []
         assert anagrams('ABC123') == 'Invalid word'
 
+    def test_anagrams_blank(self):
+        assert anagrams_blank('pancak') == ['manpack', 'packman', 'pancake']
+        assert anagrams_blank('QQQ') == []
+
+    def test_permutations(self):
+        assert anagrams_blank('abc') == ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
+        assert anagrams_blank('aba') == ['aba', 'aab', 'baa']
+
     def test_select_random_sentence_returns_non_empty_string(self):
         sentence = wordutilities.select_random_sentence()
         assert isinstance(sentence, str) and len(sentence) > 0

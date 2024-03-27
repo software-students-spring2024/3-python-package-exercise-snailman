@@ -18,8 +18,12 @@ def permutations(word):
             first_char = word[i]
             remaining_chars = word[:i] + word[i+1:]
             for perm in permutations(remaining_chars):
-                perms.append(first_char + perm)
+                if (first_char + perm) not in perms:
+                    perms.append(first_char + perm)
         return perms
+    
+print(permutations('abc'))
+print(permutations('aba'))
 
 def anagrams(word):
     
