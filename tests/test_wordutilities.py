@@ -31,8 +31,8 @@ class TestWordUtilities:
         assert anagrams_blank('QQQ') == []
 
     def test_permutations(self):
-        assert anagrams_blank('abc') == ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
-        assert anagrams_blank('aba') == ['aba', 'aab', 'baa']
+        assert permutations('abc') == ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
+        assert permutations('aba') == ['aba', 'aab', 'baa']
 
     def test_select_random_sentence_returns_non_empty_string(self):
         sentence = wordutilities.select_random_sentence()
