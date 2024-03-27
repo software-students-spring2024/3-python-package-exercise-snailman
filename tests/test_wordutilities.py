@@ -17,12 +17,14 @@ class TestWordUtilities:
         scrambled_word = scramble(word)
         assert sorted(word) == sorted(scrambled_word)
     
-    @pytest.mark.xfail(raises=NotImplementedError)
+    #@pytest.mark.xfail(raises=NotImplementedError)
     def test_anagrams(self):
-        assert anagrams('listen') == ['silent']
-        assert anagrams('elbow') == ['below']
-        assert anagrams('elbow') != ['belowwwwww']
-        assert anagrams('hello') == []
+        assert anagrams('listen').sort == ['elints', 'enlist', 'inlets', 'listen', 'silent', 'tinsel']
+        assert anagrams('LiStEn').sort == anagrams('sTINel').sort
+        assert anagrams('elbow').sort == ['below', 'bowel', 'elbow']
+        assert anagrams('hello') == ['hello']
+        assert anagrams('QQQ').sort == ['']
+        assert anagrams('ABC123').sort == 'Invalid word'
     
     @pytest.mark.xfail(raises=NotImplementedError)
     def test_define(self):
