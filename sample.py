@@ -34,3 +34,6 @@ class sample:
     print(select_random_most_common_word())
     print(select_random_most_common_word())
     print(select_random_most_common_word())
+
+    print('\n\nFill in the blanks:')
+    fill_blanks()

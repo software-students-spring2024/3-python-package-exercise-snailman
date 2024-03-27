@@ -44,6 +44,11 @@ Parameters:
 Return value: a string
 Generates and returns a random word from a predefined list of the 20 most common words
 
+###fill_blanks()
+Paramenters:
+Return value:
+Selects a random sentence and replaces a word with a blank. User must guess out of three options the correct answer to fill in the blank. They will be prompted to try again until they either get the correct answer or quit.
+
 ## TODO: Instructions for importation
 
 ## Contributing
