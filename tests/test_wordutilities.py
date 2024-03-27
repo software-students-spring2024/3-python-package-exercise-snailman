@@ -1,7 +1,6 @@
 import pytest
 from unittest.mock import patch
 from src.wordutilities import *
-from wordutilities import wordutilities # left here for testing purposes, seems to be unnecessary
 
 class TestWordUtilities:
 
