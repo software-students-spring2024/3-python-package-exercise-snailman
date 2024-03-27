@@ -7,6 +7,8 @@ An exercise to create a Python package, build it, test it, distribute it, and us
 
 [wordutilities](https://test.pypi.org/project/wordutilities/): A Python package that provides some functions related to English-language words.
 
+## TODO: Instructions for importation
+
 ## Contributing
 
 ### Set up virtual environment:
