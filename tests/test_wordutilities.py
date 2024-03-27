@@ -25,20 +25,6 @@ class TestWordUtilities:
         assert anagrams('hello') == ['hello']
         assert anagrams('QQQ') == []
         assert anagrams('ABC123') == 'Invalid word'
-    
-    @pytest.mark.xfail(raises=NotImplementedError)
-    def test_define(self):
-        # Define with no range specified
-        assert define('hello') == 'A greeting or expression of goodwill.'
-        
-        # Define with upper bound specified
-        assert define('hello', upper=2) == 'A greeting or expression of goodwill.'
-        
-        # Define with lower and upper bounds specified
-        assert define('hello', lower=1, upper=2) == 'A greeting or expression of goodwill.'
-        
-        # Define with invalid range
-        assert define('hello', lower=5, upper=10) == 'No definitions found in the given range.'
 
     def test_select_random_sentence_returns_non_empty_string(self):
         sentence = wordutilities.select_random_sentence()

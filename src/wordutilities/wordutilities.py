@@ -49,7 +49,18 @@ def anagrams(word):
     
     # raise NotImplementedError
 
-print(anagrams('qqq'))
+def anagrams_blank(word):
+    word = word.lower()
+    pattern = re.compile(r'^[a-z]+$')
+    if (pattern.match(word) == None):
+        return 'Invalid word'
+    # hashed anagram search (much faster)
+    all_anagrams = []
+    for letter in 'abcdefghijklmnopqrstuvwxyz':
+        modified_word = word + '' + letter
+        all_anagrams += anagrams(modified_word)
+    all_anagrams.sort()
+    return all_anagrams
 
 def is_anagram(word1, word2):
     """
@@ -80,26 +91,6 @@ def scramble(word):
     word = list(word)  
     random.shuffle(word)
     return ''.join(word)
-
-def define(word, lower = None, upper = None):
-    """
-    TO BE IMPLEMENTED
-    Finds definition(s) of a word
-
-    Args:
-        word: Word to be defined.
-        upper: upper bound in range of total function definitions, exclusive
-        lower: lower bound in range of total function definitions, inclusive
-        
-    Returns:
-        String of word definitions within range, giving only the first if no range provided
-    """
-
-    # if lower is None:
-    #     lower = 1
-    # commented out for unit testing
-    
-    raise NotImplementedError
 
 def select_random_sentence():
     """
