@@ -8,7 +8,22 @@ An exercise to create a Python package, build it, test it, distribute it, and us
 
 [wordutilities](https://test.pypi.org/project/wordutilities/): A Python package that provides some functions related to English-language words.
 
-## TODO: Instructions for importation
+## Install package:
+
+1. Create a pipenv-managed virtual environment and install the latest version of the package:`pipenv install -i https://test.pypi.org/simple/ wordutilities==[version number]`
+2. Activate the virtual environment: `pipenv shell`.
+3. Create a Python program file that imports the package and uses it, e.g. `from wordutilities import wordutilities`.
+4. Here are some examples as to how to call each function in the package:
+    - `wordutilities.is_anagram("abc","cba")`
+    - `wordutilities.scramble("abc")`
+    - `wordutilities.anagrams("abc")`
+    - `wordutilities.is_blank("abc")`
+    - `wordutilities.permutations("hello")`
+    - `wordutilities.select_random_sentence()`
+    - `wordutilities.select_random_most_common_word()`
+    - `wordutilities.fill_blanks()`
+5. Run the python program.
+6. Exit the virtual environment: `exit`.
 
 ### Function documentation:
 
@@ -87,24 +102,6 @@ Run `pipenv install` in your virtual environment.
 
 1. Run `python -m build` in the directory where `pyproject.toml` is located.
 2. Verify that the built .tar archive has the correct contents using `tar --list -f dist/wordutilities-[version number].tar.gz`
-
-## Install package:
-
-1. Create a pipenv-managed virtual environment and install the latest version of the package:`pipenv install -i https://test.pypi.org/simple/ wordutilities==[version number]`
-2. Activate the virtual environment: `pipenv shell`.
-3. Create a Python program file that imports the package and uses it, e.g. `from wordutilities import wordutilities`.
-4. Here are some examples as to how to call each function in the package:
-    - `wordutilities.is_anagram("abc","cba")`
-    - `wordutilities.scramble("abc")`
-    - `wordutilities.anagrams("abc")`
-    - `wordutilities.is_blank("abc")`
-    - `wordutilities.permutations("hello")`
-    - `wordutilities.select_random_sentence()`
-    - `wordutilities.select_random_most_common_word()`
-    - `wordutilities.fill_blanks()`
-5. Run the python program.
-6. Exit the virtual environment: `exit`.
-
 
 
 ### Test package:
