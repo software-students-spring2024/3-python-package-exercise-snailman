@@ -19,7 +19,7 @@ class TestWordUtilities:
     
     #@pytest.mark.xfail(raises=NotImplementedError)
     def test_anagrams(self):
-        assert anagrams('listen') == ['elints', 'enlist', 'inlets', 'listen', 'silent', 'tinsel']
+        assert anagrams('listen') == ['enlist', 'inlets', 'listen', 'silent', 'slinte', 'tinsel']
         assert anagrams('LiStEn') == anagrams('sTINel')
         assert anagrams('elbow') == ['below', 'bowel', 'elbow']
         assert anagrams('hello') == ['hello']
