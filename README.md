@@ -76,6 +76,7 @@ Selects a random sentence and replaces a word with a blank. User must guess out 
 2. Clone the repository.
 3. Run `pipenv shell` in your cloned repository.
 
+
 ### Install dependencies:
 
 Run `pipenv install` in your virtual environment.
