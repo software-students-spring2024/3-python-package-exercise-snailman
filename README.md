@@ -10,20 +10,18 @@ An exercise to create a Python package, build it, test it, distribute it, and us
 
 ## Install package:
 
-1. Create a pipenv-managed virtual environment and install the latest version of the package:`pipenv install -i https://test.pypi.org/simple/ wordutilities==[version number]`
-2. Activate the virtual environment: `pipenv shell`.
-3. Create a Python program file that imports the package and uses it, e.g. `from wordutilities import wordutilities`.
-4. Here are some examples as to how to call each function in the package:
-    - `wordutilities.is_anagram("abc","cba")`
-    - `wordutilities.scramble("abc")`
-    - `wordutilities.anagrams("abc")`
-    - `wordutilities.is_blank("abc")`
-    - `wordutilities.permutations("hello")`
-    - `wordutilities.select_random_sentence()`
-    - `wordutilities.select_random_most_common_word()`
-    - `wordutilities.fill_blanks()`
+1. Use the following command to install the package: `pip install -i https://test.pypi.org/simple/ wordutilities`
+2. Create a Python program file that imports the package and uses it, e.g. `from wordutilities import wordutilities`.
+3. Here are some examples as to how to call each function in the package:
+    - `is_anagram("abc","cba")`
+    - `scramble("abc")`
+    - `anagrams("abc")`
+    - `is_blank("abc")`
+    - `permutations("hello")`
+    - `select_random_sentence()`
+    - `select_random_most_common_word()`
+    - `fill_blanks()`
 5. Run the python program.
-6. Exit the virtual environment: `exit`.
 
 ### Function documentation:
 
@@ -106,7 +104,8 @@ Run `pipenv install` in your virtual environment.
 
 ### Test package:
 
-1. Run `python3 -m pytest` in the project directory.
+1. Install pytest
+2. Run `python3 -m pytest` in the project directory.
 
 ## Teammates
 
