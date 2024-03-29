@@ -6,7 +6,7 @@
 
 ## Install package:
 
-1. Use the following command to install the package: `pip install -i https://test.pypi.org/simple/ wordutilities`
+1. Use the following command to install the package: `pip install -i https://test.pypi.org/simple/ wordutilities`.
 2. Create a Python program file that imports the package and uses it, e.g. `from wordutilities import wordutilities`.
 3. Here are some examples as to how to call each function in the package:
     - `is_anagram("abc","cba")`
